@@ -1,25 +1,24 @@
 const express = require('express');
 const morgan = require('morgan');
-const handlebars = require('express-handlebars');
+const exphbs = require('express-handlebars');
 const path = require('path');
 
 //Initializations
-
 const app = express();
 
 
 //Settings
 app.set('port', process.env.PORT || 4000);
+
 app.set('views', path.join(__dirname, 'views'));
 
-app.engine('.hbs',handlebars({
+app.engine('.hbs', exphbs({
     defaultLayout: 'main',
     layoutsDir: path.join(app.get('views'), 'layouts'),
     partialsDir: path.join(app.get('views'), 'partials'),
     extname: '.hbs',
     helpers: require('./lib/handlebars')
-}));
-
+}))
 app.set('view engine', '.hbs');
 
 
@@ -38,7 +37,7 @@ app.use((req, res, next) => {
 // Routes
 app.use(require('./routes'));
 app.use(require('./routes/auth'));
-app.use('data', require('./routes/data'));
+app.use('/data', require('./routes/data'));
 
 //Public
 app.use(express.static(path.join(__dirname, 'public')))

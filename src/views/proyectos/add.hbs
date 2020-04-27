@@ -1,0 +1,71 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-8 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title text-center">Nuevo Proyecto</h1>
+                </div>
+
+                <div class="card-body formularioProyectos">
+                    <form action="/data/add" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="nombre" class="form-control" placeholder="Nombre del proyecto" required autofocus>
+                        </div>
+                        <!--<small class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                        <div class="form-group">
+                            <input type="text" name="superficie" class="form-control" placeholder="Superficie" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <small class="form-text text-muted">Fecha de inicio</small>
+                                    <input type="date" name="fecha_inicio" class="form-control" required>
+                                </div>
+                                <div class="col-6">
+                                    <small class="form-text text-muted">Fecha de finalizacion</small>
+                                    <input type="date" name="fecha_fin" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="nombre_propietario" class="form-control"
+                                placeholder="Nombre del propietario" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="apellido_propietario" class="form-control"
+                                placeholder="Apellido del propietario" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="telefono" placeholder="Telefono" required>
+                        </div>
+                        <h4 class="text-center">DIRECCION</h4>
+                        <div class="form-group">
+                            <input type="text" name="calle" class="form-control" placeholder="Calle" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="numero" class="form-control" placeholder="Numero" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="num_interno" class="form-control" placeholder="Numero interno" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="colonia" class="form-control" placeholder="Colonia" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="ciudad" class="form-control" placeholder="Ciudad" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="estado" class="form-control" placeholder="Estado" required>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
